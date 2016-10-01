@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ultimos 10</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-card *ngFor="let item of list">
+
+    <ion-item>
+      <h2>Medida: {{item.Medida}}</h2>
+      <p>{{item.Galones}} Galones</p>
+    </ion-item>
+
+    <ion-card-content>
+      <p>
+        Tanque {{item.Tanque}}
+        <br> {{item.Fecha}}
+      </p>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

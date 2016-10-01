@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ultimo</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="show" >
+
+    <ion-item>
+      <h2>Medida: {{show.Medida}}</h2>
+      <p>{{show.Galones}} Galones</p>
+    </ion-item>
+
+    <ion-card-content>
+      <p>
+        Tanque {{show.Tanque}}
+        <br>
+        {{show.Fecha}}
+      </p>
+    </ion-card-content>
+    
+  </ion-card>
+</ion-content>
