@@ -25,10 +25,11 @@ $background-color:  #fff;
 $colors: (
   primary:    #387ef5,
   secondary:  #32db64,
-  danger:     #f53d3d,
+  danger:     #e74c3c,
   light:      #f4f4f4,
   dark:       #222,
-  favorite:   #69BB7B
+  favorite:   #69BB7B,
+  ambient:    #3498db
 );
 
 
@@ -50,3 +51,4 @@ $colors: (
 $ionicons-font-path: "../assets/fonts";
 @import "ionicons";
 
+$menu-width: 200px;

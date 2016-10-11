@@ -1,27 +1,85 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
+	<ion-navbar color="ambient">
+		<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Ultimo</ion-title>
-  </ion-navbar>
+		<ion-title>Ultimo</ion-title>
+	</ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-card *ngIf="show" >
+	<ion-card *ngIf="show">
 
-    <ion-item>
-      <h2>Medida: {{show.Medida}}</h2>
-      <p>{{show.Galones}} Galones</p>
-    </ion-item>
+		<ion-item>
+			<h2>Medida: {{show.Medida}}</h2>
+			<p>{{show.Galones}} Galones</p>
+		</ion-item>
 
-    <ion-card-content>
-      <p>
-        Tanque {{show.Tanque}}
-        <br>
-        {{show.Fecha}}
-      </p>
-    </ion-card-content>
-    
-  </ion-card>
+		<ion-card-content>
+			<p>
+				Tanque {{show.Tanque}}
+				<br> {{show.Fecha}}
+			</p>
+		</ion-card-content>
+
+	</ion-card>
+
+	<ion-list *ngIf="show">
+		<ion-list-header>
+			Información
+		</ion-list-header>
+
+		<ion-item-sliding>
+			<ion-item>
+				<h2>{{show.Medida}}</h2>
+				<p>Medida</p>
+			</ion-item>
+			<ion-item-options>
+				<button ion-button color="light" icon-left>
+          <ion-icon name="ios-more"></ion-icon>
+          Info
+        </button>
+			</ion-item-options>
+		</ion-item-sliding>
+
+		<ion-item-sliding>
+			<ion-item>
+				<h2>{{show.Galones}}</h2>
+				<p>Galones</p>
+			</ion-item>
+			<ion-item-options>
+				<button ion-button color="light" icon-left>
+          <ion-icon name="ios-more"></ion-icon>
+          Info
+        </button>
+			</ion-item-options>
+		</ion-item-sliding>
+
+		<ion-item-sliding>
+			<ion-item>
+				<h2>{{show.Tanque}}</h2>
+				<p>Numero del Tanque</p>
+			</ion-item>
+			<ion-item-options>
+				<button ion-button color="light" icon-left>
+          <ion-icon name="ios-more"></ion-icon>
+          Info
+        </button>
+			</ion-item-options>
+		</ion-item-sliding>
+
+		<ion-item-sliding>
+			<ion-item>
+				<h2>{{show.Fecha}}</h2>
+				<p>Fecha de captura</p>
+			</ion-item>
+			<ion-item-options>
+				<button ion-button color="light" icon-left>
+          <ion-icon name="ios-more"></ion-icon>
+          Info
+        </button>
+			</ion-item-options>
+		</ion-item-sliding>
+
+	</ion-list>
 </ion-content>
